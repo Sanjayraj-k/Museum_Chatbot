@@ -97,10 +97,8 @@ else:
 # Get Pinecone index
 pinecone_index = pinecone_client.Index(INDEX_NAME)
 
-# Initialize Pinecone vector store
-# The PineconeVectorStore now directly takes the client, index name, and embedding
 vector_store = PineconeVectorStore(
-    pinecone_api_key=PINECONE_API_KEY, # Pass the API key directly
+    pinecone_api_key=PINECONE_API_KEY, 
     index_name=INDEX_NAME,
     embedding=embeddings
 )
